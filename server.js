@@ -6,7 +6,7 @@ let bodyParser = require('body-parser');
 
 require("dotenv").config();
 
-const chatRoute = require('./routes/chat.route')
+const productRoute = require('./routes/product.route')
 
 // middleware
 const corsOptions = {
@@ -34,4 +34,4 @@ mongoose.connect(process.env.MONGODB_URI, {
 
 // route
 
-app.use('/chats', chatRoute)
+app.use('/products', productRoute)
